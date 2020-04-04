@@ -1,13 +1,41 @@
 {
 	"user": "Papawy",
-	"repo": "pwyrp",
+	"repo": "papawy-rp-v8",
 	"entry": "pwyrp.pwn",
 	"output": "pwyrp.amx",
 	"dependencies": [
 		"sampctl/samp-stdlib",
 		"pawn-lang/YSI-Includes:v5.1",
 		"Southclaws/pawn-requests",
-		"Awsomedude/easyDialog:2.0"
+		"Awsomedude/easyDialog:2.0",
+		"BigETI/pawn-map",
+		"AbyssMorgan/MD5"
+	],
+	"builds": [
+		{
+			"name": "dev",
+			"args": [
+				"-;+",
+				"-(+",
+				"-d3",
+				"-Z+"
+			],
+			"constants": {
+				"MAX_PLAYERS": "20"
+			}
+		},
+		{
+			"name": "prod",
+			"args": [
+				"-;+",
+				"-(+",
+				"-O2",
+				"-Z+"
+			],
+			"constants": {
+				"MAX_PLAYERS": "300"
+			}
+		}
 	],
 	"runtime": {
 		"version": "0.3.7",
@@ -15,12 +43,12 @@
 		"echo": "-",
 		"rcon_password": "password",
 		"port": 7777,
-		"hostname": "SA-MP Server",
+		"hostname": "Papawy RP V8",
 		"maxplayers": 50,
 		"language": "",
-		"mapname": "San Andreas",
-		"weburl": "www.sa-mp.com",
-		"gamemodetext": "Unknown",
+		"mapname": "Los Santos",
+		"weburl": "github.com/Papawy/papawy-rp-v8",
+		"gamemodetext": "PapawyRPV8",
 		"announce": true,
 		"lanmode": false,
 		"query": true,

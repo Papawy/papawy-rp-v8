@@ -1,15 +1,16 @@
 language: cpp
 sudo: enabled
+os: linux
+dist: bionic
+
 install:
 - curl https://raw.githubusercontent.com/Southclaws/sampctl/master/install-deb.sh | sh
 - sudo dpkg --add-architecture i386
 - sudo apt update && sudo apt install -y g++-multilib
+
 jobs:
   include:
     - stage: "Build"
       script:
         - sampctl package ensure
-        - sampctl package build
-    - stage: "Test"
-      script:
-        - sampctl package run
+        - sampctl package build prod

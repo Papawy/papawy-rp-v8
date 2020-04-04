@@ -8,8 +8,8 @@ public OnPlayerWantsLogin(playerid)
     return 1;
 }
 
-Dialog:LoginDialog(playerid, response, listitem, inputtext[])
+Dialog:LoginMenu(playerid, response, listitem, inputtext[])
 {
-
+    SendClientMessage(playerid, 0xFFFFFFFF, "Youhou t'es login lel");
     return 1;
 }

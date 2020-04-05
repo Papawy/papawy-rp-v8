@@ -74,6 +74,10 @@
 		"db_log_queries": false,
 		"conncookies": true,
 		"cookielogging": false,
-		"output": true
+		"output": true,
+        "plugins": [
+            "Southclaws/pawn-requests",
+            "BigETI/pawn-memory"
+        ]
 	}
 }

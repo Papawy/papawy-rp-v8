@@ -1,8 +1,11 @@
+#pragma warning disable 239
+#pragma warning disable 214
+
+#define YSI_NO_HEAP_MALLOC
+
 #include <a_samp>
 
 #include <requests>
-
-#define API_URL "https://papawy.herokuapp.com/api/"
 
 new RequestsClient:rClient;
 
@@ -49,8 +52,10 @@ public OnRequestFailure(Request:id, errorCode, errorMessage[], len)
     return 0;
 }
 
-#include "users/forwards.pwn"
+#include "utils/functions.pwn"
 
+#include "users/forwards.pwn"
+#include "users/data.pwn"
 #include "users/welcome.pwn"
 #include "users/login.pwn"
 #include "users/register.pwn"

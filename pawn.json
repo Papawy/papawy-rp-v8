@@ -9,7 +9,8 @@
 		"Southclaws/pawn-requests",
 		"Awsomedude/easyDialog:2.0",
 		"BigETI/pawn-map",
-		"AbyssMorgan/MD5"
+		"AbyssMorgan/MD5",
+		"maddinat0r/sscanf:v2.8.3"
 	],
 	"builds": [
 		{
@@ -41,6 +42,10 @@
 		"version": "0.3.7",
 		"mode": "server",
 		"echo": "-",
+		"plugins": [
+			"Southclaws/pawn-requests",
+			"BigETI/pawn-memory"
+		],
 		"rcon_password": "password",
 		"port": 7777,
 		"hostname": "Papawy RP V8",
@@ -74,10 +79,6 @@
 		"db_log_queries": false,
 		"conncookies": true,
 		"cookielogging": false,
-		"output": true,
-        "plugins": [
-            "Southclaws/pawn-requests",
-            "BigETI/pawn-memory"
-        ]
+		"output": true
 	}
 }

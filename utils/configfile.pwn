@@ -2,16 +2,15 @@
 
 enum E_SERVER_CONF
 {
-	srvApiHost[256],
-};
+	srvApiHost[256]
+}
 
 new gServerConfig[E_SERVER_CONF];
 
-INI:serverconfig[API](name[], value[])
+INI:config[api](name[], value[])
 {
-	INI_String("host", gServerConfig[srvApiHost], 256);
-
-	return 0;
+	INI_String("url", gServerConfig[srvApiHost], 256);
+    return 0;
 }
 
 LoadConfigFile()
@@ -23,8 +22,8 @@ LoadConfigFile()
         return 1;
 	}
 
-    printf("[OK] config.ini loaded !");
-	printf("[OK] 	API Host: '%s'", gServerConfig[srvApiHost]);
+    printf("[CONFIG] config.ini loaded !");
+	printf("[CONFIG] 	API Host: '%s'", gServerConfig[srvApiHost]);
 
     return 0;
 }
